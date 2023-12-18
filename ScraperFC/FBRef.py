@@ -30,6 +30,8 @@ class FBRef:
                              'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 '+\
                              'Safari/537.36')
         options.add_argument('--incognito')
+        options.add_argument("--no-sandbox")
+        options.add_argument("--headless")
         prefs = {'profile.managed_default_content_settings.images': 2} # don't load images
         options.add_experimental_option('prefs', prefs)
         self.driver = webdriver.Chrome(options=options) 
